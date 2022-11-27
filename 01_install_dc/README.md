@@ -6,8 +6,17 @@
     - Change the DNS server to the IP of the domain controller
 
 
-2. Install the Active Directory Windows Feature using PowerShell
+2. Install the Active Directory Windows Feature
 
-```shell
+```powershell
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
+
+
+3. Configure Active Directory
+
+```powershell
+Import-Module -Name ADDSDeployment
+Install-ADDSForest
+```
+
